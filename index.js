@@ -12,12 +12,12 @@ function getSimpsonQuote() {
       console.log('data decoded from JSON:', simpsonQuote);
 
       // Build a block of HTML
-      const simpsonQuoteHtml = `
+      let simpsonQuoteHtml = `
         <p><strong>${simpsonQuote[0].character}</strong></p>
         <img src="${simpsonQuote[0].image}" />
       <blockquote>${simpsonQuote[0].quote}</blockquote>`;
-
-      document.querySelector('#simpson-quote').innerHTML = simpsonQuoteHtml;
+      const simpsonsQuote = document.querySelector('#simpson-quote');
+      simpsonsQuote.innerHTML = simpsonQuoteHtml;
     });
 }
 
